@@ -1,0 +1,17 @@
+[Unit]
+Description=bot
+After=multi-user.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+Restart=always
+RestartSec=5
+WorkingDirectory=/var/www/user/data/python_dev/bot/
+ExecStart=/var/www/user/data/python_dev/bot/env/bin/python /var/www/user/data/python_dev/bot/bot.py
+StandardOutput=file:/var/www/user/data/python_dev/bot/service.log
+StandardError=file:/var/www/user/data/python_dev/bot/service.log
+
+[Install]
+WantedBy=multi-user.target

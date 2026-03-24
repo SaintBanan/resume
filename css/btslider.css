@@ -1,0 +1,136 @@
+.btslider {
+    overflow: hidden;
+    position: relative;
+    padding: 0.5rem 0 3rem;
+}
+
+.btslider__front-card, .btslider__back-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 270px;
+    max-height: 432px;
+    width: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: 1s;
+    position: absolute;
+}
+
+.btslider__name > span {
+    line-height: 1.4rem;
+    display: -webkit-box;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-wrap: anywhere;
+}
+
+.btslider__sticker-badge::before {
+    height: 40px;
+    width: 40px;
+    background: inherit;
+    content: "";
+    position: absolute;
+    transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+}
+
+.btslider__sticker-badge::after {
+    height: 40px;
+    width: 40px;
+    background: inherit;
+    content: "";
+    position: absolute;
+    transform: rotate(-30deg);
+        -moz-transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+        -o-transform: rotate(-30deg);
+}
+
+.btslider__sticker-badge[data-type="new"] {
+    background: #ff4;
+}
+
+.btslider__sticker-badge[data-type="lowprice"] > span {
+    top: 14px;
+    font-size: 0.69em;
+    -webkit-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+}
+
+.btslider .swiper-button-next, .btslider .swiper-button-prev {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px #0000001a;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.btslider .swiper-button-next::after, .btslider .swiper-button-prev::after {
+    font-size: 100%;
+}
+
+.btslider .swiper-button-next.swiper-button-disabled,
+.btslider .swiper-button-prev.swiper-button-disabled {
+    opacity: 0;
+}
+
+.btslider:hover .swiper-button-prev {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform:translateX(0.5rem);
+        -ms-transform:translateX(0.5rem);
+            transform:translateX(0.5rem);
+}
+
+.btslider:hover .swiper-button-next {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform:translateX(-0.5rem);
+        -ms-transform:translateX(-0.5rem);
+            transform:translateX(-0.5rem);
+}
+
+.btslider__features::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.btslider__features::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #8b8b8b, #8b8b8b);
+    border-radius: 7px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btslider__features::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.btslider-shadow {
+    -webkit-box-shadow: 0.1em 0.1em 10px rgb(122 122 122 / 25%);
+    box-shadow: 0.1em 0.1em 10px rgb(122 122 122 / 25%);
+}
+
+.btslider-hidden {
+    display: none !important;
+}
