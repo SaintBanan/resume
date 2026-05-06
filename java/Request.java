@@ -83,4 +83,6 @@ public class Request {
 
         wRetrofit.getApi().sendPhone(new CheckPhoneBody(phone), wRetrofit.getAuthToken()).enqueue(getCallback(context, callback));
     }
+
+    // и другие методы
 }
