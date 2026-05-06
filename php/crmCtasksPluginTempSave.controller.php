@@ -16,11 +16,10 @@ class crmCtasksPluginTempSaveController extends waJsonController
         $id = waRequest::post('id', 0, 'int');
         $data = json_decode(waRequest::post('data', '{}'), true);
         $details = json_decode(waRequest::post('details', '{}'), true);
-        $is_csrf_passed = crmCtasksPluginHelper::isCSRF(waRequest::post('_csrf', ''), $_COOKIE['_csrf']);
 
         $this->response = null;
 
-        if (!$data || !$is_csrf_passed) return;
+        if (!$data) return;
 
         $tempModel = new crmCtasksTempModel();
         $detailsModel = new crmCtasksTempDetailsModel();
