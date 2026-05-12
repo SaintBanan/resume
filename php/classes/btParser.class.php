@@ -1,6 +1,6 @@
 <?php
 
-class btEyeParser
+class btParser
 {
     const SET_DISCOUNT = 'vendor-discounts';
 

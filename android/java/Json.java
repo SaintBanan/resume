@@ -9,7 +9,9 @@ public class Json {
 
     private static Gson getGson() {
 
-        if (gson == null) gson = new Gson();
+        if (gson == null) {
+            gson = new Gson();
+        }
 
         return gson;
     }
