@@ -286,23 +286,7 @@ class btParser
                 $this->shopSkusModel->updateById($sku_id, $sku_prices);
             }
 
-            if ($product_prices) {
-
-                // Получить актуальные MIN и MAX цены товара
-                $product_prices['min_price'] = (float) $this->model->query(
-                    'SELECT MIN(price) FROM shop_product_skus WHERE product_id = i:id', ['id' => $product['id']]
-                )->fetchField();
-
-                $product_prices['max_price'] = (float) $this->model->query(
-                    'SELECT MAX(price) FROM shop_product_skus WHERE product_id = i:id', ['id' => $product['id']]
-                )->fetchField();
-
-                $product_prices['min_base_price'] = $product_prices['min_price'];
-                $product_prices['max_base_price'] = $product_prices['max_price'];
-
-                // Обновить доп. цены товара
-                $this->shopProductModel->updateById($product['id'], $product_prices);
-            }
+            $this->saveProdPrice($product['id'], $product_prices);
         }
 
         $this->parse_data['vendor_count']++;
@@ -422,5 +406,23 @@ class btParser
         }
     }
 
-    ### и другие методы ###
+    private function saveProdPrice($product_id, $product_prices)
+    {
+        // Получить актуальные MIN и MAX цены товара
+        $product_prices['min_price'] = (float) $this->model->query(
+            'SELECT MIN(price) FROM shop_product_skus WHERE product_id = i:0', [$product_id]
+        )->fetchField();
+
+        $product_prices['max_price'] = (float) $this->model->query(
+            'SELECT MAX(price) FROM shop_product_skus WHERE product_id = i:0', [$product_id]
+        )->fetchField();
+
+        $product_prices['min_base_price'] = $product_prices['min_price'];
+        $product_prices['max_base_price'] = $product_prices['max_price'];
+
+        // Обновить доп. цены товара
+        $this->shopProductModel->updateById($product_id, $product_prices);
+    }
+
+    # ... и другие методы ...
 }

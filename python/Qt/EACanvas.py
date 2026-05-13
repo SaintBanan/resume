@@ -1,6 +1,6 @@
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
-import random, matplotlib, numpy as np
+import matplotlib, numpy as np
 
 matplotlib.use('Qt5Agg')
 

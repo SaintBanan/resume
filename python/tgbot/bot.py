@@ -73,7 +73,7 @@ def get_phone_keyboard():
 async def cmd_start(message: types.Message, state: FSMContext):
 
     await message.answer(
-        "Приветствие",
+        "Приветствие...",
         parse_mode = "Markdown",
         reply_markup = get_keyboard(prices_choices)
     )
@@ -209,6 +209,8 @@ def get_prices_text():
     • Точка отопления — N р.
     • Прокладка трассы отопления — N р.
     • Установка радиатора (на готовые выводы) — N р.
+                           
+    ... и другой текст ...
     """)
 
 # ========== ЗАПУСК БОТА ==========
