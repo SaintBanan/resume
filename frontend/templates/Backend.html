@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>{$title}</title>
+		{$wa->css()}
+		<link rel="stylesheet" href="{$wa_app_static_url}css/styles.css?v.{$wa->version()}">
+		<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="{$wa->url()}wa-content/js/jquery-wa/wa.js"></script>
+		<script src="{$wa_app_static_url}js/helper.js?v.{$wa->version()}"></script>
+	</head>
+	<body>
+		<script>
+			var rootAppUrl = '{$wa_app_static_url}';
+			var rootUrl = '{$wa_url}';
+		</script>
+		<span class="back-url hidden">{$wa->url()}</span>
+		<div id="wa">
+			{$wa->header()}
+			<div id="wa-app">
+				<div class="flexbox">
+					{$sidebar}
+					{$content}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -61,14 +61,16 @@
             }
 
             tempList.append(getTaskHtml(task));
-            tempList.find(`.ctasks-temp-item[data-id="${task.id}"] .ctasks-temp-item__footer-actions`).waDropdown({ hover: false });
+            tempList.find(`.ctasks-temp-item[data-id="${task.id}"] .ctasks-temp-item__footer-actions`)
+                .waDropdown({ hover: false });
         }
 
         Plugin.prototype.updateTask = function(task) {
 
             temps[task.id] = task;
             tempList.find(`.ctasks-temp-item[data-id="${task.id}"]`).replaceWith(getTaskHtml(task));
-            tempList.find(`.ctasks-temp-item[data-id="${task.id}"] .ctasks-temp-item__footer-actions`).waDropdown({ hover: false });
+            tempList.find(`.ctasks-temp-item[data-id="${task.id}"] .ctasks-temp-item__footer-actions`)
+                .waDropdown({ hover: false });
         }
 
         Plugin.prototype.alertWindow = function(str) {
@@ -139,7 +141,7 @@
             switch (+priority) {
                 case 1: return '<i class="fas fa-exclamation-circle text-orange"></i>';
                 case 2: return '<i class="fas fa-exclamation-circle text-red"></i>';
-                case 3: return `<i class="ctasks-temp-priority-fire" style="background: url(${tasksImgDir}priority-fire.gif) no-repeat;"></i>`;
+                case 3: return '<i class="ctasks-temp-priority-fire"></i>';
             }
 
             return '';
@@ -188,7 +190,7 @@
                         <footer class="dialog-footer">
                             <button class="button red ctasks-remove">Удалить</button>
                             <button class="js-close-dialog button light-gray">Отмена</button>
-                            <span class="ctasks-load" style="display: none;"><i class="fas fa-spinner wa-animation-spin speed-1000"></i></span>
+                            <span class="ctasks-load"><i class="fas fa-spinner wa-animation-spin speed-1000"></i></span>
                         </footer>
                     </div>
                 </div>`,
@@ -201,7 +203,7 @@
 
                         let id = $taskNode.attr('data-id');
     
-                        $.post('?plugin=ctasks&module=tempRemove', { id: id, _csrf: $.ctasksPluginHelper.getCsrf() }, () => {
+                        $.post('?plugin=ctasks&module=tempRemove', { id: id }, () => {
 
                             delete temps[id];
 

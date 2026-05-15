@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="{$wa_app_static_url}css/eye/parsers.css?v.{$wa->version()}">
+{include file="templates/layouts/eye/Sidebar.html"}
+<div class="content flexbox vertical hide-scrollbar">
+	<div style="padding: 2rem 4rem;">
+		<div class="eye-header">
+			<h3>Парсеры</h3>
+			<button class="circle create-parser"><i class="fas fa-plus"></i></button>
+			<div class="parsers-filters dropdown">
+				<button class="dropdown-toggle button light-gray rounded" type="button">Все</button>
+				<div class="dropdown-body">
+					<ul class="menu">
+						<li>
+							<a href="javascript:void(0);" data-type="all">Все</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" data-type="Парсер">Парсеры сайтов</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" data-type="API">API</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<p class="eye-not-parsers">Нет парсеров</p>
+		<ul class="parser-list thumbs"></ul>
+	</div>
+</div>
+<script src="{$wa_app_static_url}js/eye/parsers.js?v={$wa->version()}"></script>
+<script>
+	parsersModule.init({json_encode($parsers)}, '{$wa_backend_url}', {$wa->whichUI('shop')});
+</script>
