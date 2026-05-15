@@ -7,4 +7,4 @@
 | `/android` | Java, Android SDK | Фрагменты Android-приложения: работа с сетью, БД, UI. |
 | `/frontend` | JavaScript, jQuery, HTML, CSS | Примеры фронтенд-логики и кастомизации интерфейсов. |
 | `/php` | PHP 7.2+, Webasyst | Примеры плагинов, API-интеграций, работы с БД, метообновлений. |
-| `/python` | Python, Qt | Фрагменты микросервисов, Telegram-ботов, обработки данных, ORM, графика. |
+| `/python` | Python, Qt | Фрагменты API-сервисов, Telegram-ботов, обработки данных, ORM, UI. |
