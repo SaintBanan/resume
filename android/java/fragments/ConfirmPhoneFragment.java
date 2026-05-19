@@ -22,6 +22,7 @@ import com.example.bt.request.Request;
 import com.example.bt.response.AuthResponse;
 
 public class ConfirmPhoneFragment extends Fragment {
+    
     private Context context;
     private EditText code_edit;
     private Button confirm_btn;
@@ -59,6 +60,7 @@ public class ConfirmPhoneFragment extends Fragment {
         String code = code_edit.getText().toString();
 
         if (code.length() == 0) {
+
             Toast.makeText(context, "Введите код", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -79,6 +81,7 @@ public class ConfirmPhoneFragment extends Fragment {
                 AuthResponse result = (AuthResponse) res;
 
                 if (result.isSuccess()) {
+                    
                     loginListener.createAccount(result.getDeviceId(), result.getData());
                     return;
                 }

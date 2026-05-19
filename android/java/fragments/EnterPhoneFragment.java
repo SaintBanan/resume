@@ -21,6 +21,7 @@ import com.example.bt.request.Request;
 import com.example.bt.response.AuthResponse;
 
 public class EnterPhoneFragment extends Fragment {
+
     private Context context;
     private EditText phone_edit;
     private Button next_btn;
@@ -53,14 +54,17 @@ public class EnterPhoneFragment extends Fragment {
 
     // Обработать нажатие кнопки "Далее"
     private void nextButtonClick() {
+
         String phone = phone_edit.getText().toString();
 
         if (phone.length() == 0) {
+
             Toast.makeText(context, "Введите номер телефона", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if (phone.length() < 10) {
+
             Toast.makeText(context, "Номер недостаточной длины", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -74,6 +78,7 @@ public class EnterPhoneFragment extends Fragment {
 
     // Отправить номер телефона
     private void sendPhone(String phone) {
+        
         Request.sendPhone(phone, context, res -> {
 
             AuthResponse authResult = (AuthResponse) res;

@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class AccountViewModel extends ViewModel {
+    
     private final MutableLiveData<UserAccount> accountLiveData = new MutableLiveData<>(null);
     private final MutableLiveData<ProfileState> profileStateLiveData = new MutableLiveData<>(null);
 
