@@ -51,7 +51,7 @@ class btParser
 
         $this->model = self::getModel();
         
-        // ...инициализация других моделей...
+        // инициализация других моделей
 
         if (!$this->setModel->idExists(self::SET_DISCOUNT)) {
             $this->setModel->add(['id' => self::SET_DISCOUNT, 'name' => 'Скидки']);
@@ -424,5 +424,5 @@ class btParser
         $this->shopProductModel->updateById($product_id, $product_prices);
     }
 
-    # ... и другие методы ...
+    // и другие методы
 }
