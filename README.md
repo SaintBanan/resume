@@ -6,5 +6,5 @@
 |------------|-------------------|------------------|
 | `/android` | Java, Android SDK, Jetpack, FCM | Фрагменты корпоративного Android-приложения. |
 | `/frontend` | HTML, CSS, JavaScript, jQuery | Примеры фронтенд-логики и кастомизации интерфейсов. |
-| `/php` | PHP, Webasyst | Примеры плагинов, API-интеграций, парсинга, работы с БД, метообновлений. |
-| `/python` | Python, FastAPI, Redis, Qt | Фрагменты микросервисов, Telegram-ботов, API, UI. |
+| `/php` | PHP, Webasyst | Примеры плагинов, API-интеграций, парсинга, работы с БД. |
+| `/python` | Python, FastAPI, Redis, OpenCV, Qt | Фрагменты микросервисов, Telegram-ботов, API, UI. |
