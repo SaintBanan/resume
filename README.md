@@ -4,7 +4,7 @@
 
 | Директория | Язык / Технологии | Краткое описание |
 |------------|-------------------|------------------|
-| `/android` | Java, Android SDK, Jetpack, FCM | Фрагменты корпоративного Android-приложения. |
-| `/frontend` | HTML, CSS, JavaScript, jQuery | Примеры фронтенд-логики и кастомизации интерфейсов. |
-| `/php` | PHP, Webasyst | Примеры плагинов, API-интеграций, парсинга, работы с БД. |
-| `/python` | Python, FastAPI, Redis, OpenCV, Qt | Фрагменты микросервисов, Telegram-ботов, API, UI. |
+| `/android` | Java, Android SDK, Jetpack, FCM | Фрагменты корпоративного Android-приложения |
+| `/frontend` | HTML, CSS, JavaScript, jQuery | Примеры фронтенд-логики и кастомизации интерфейсов |
+| `/php` | PHP, Webasyst | Примеры плагинов, API-интеграций, парсинга, работы с БД, файлами и изображениями |
+| `/python` | Python, FastAPI, Redis, OpenCV, Qt | Фрагменты микросервисов, Telegram-ботов, API, UI |
