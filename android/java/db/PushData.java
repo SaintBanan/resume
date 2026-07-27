@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(indices = { @Index(value = {"type", "data", "params"}, unique = true) })
 public class PushData {
+    
     @PrimaryKey
     private int id;
     private String type;
